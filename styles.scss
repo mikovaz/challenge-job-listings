@@ -1,0 +1,25 @@
+$colors:(
+    "primary-color":hsl(180, 29%, 50%),
+    "bg-primary": hsl(180,52%,96%),
+    "tablets-colors": hsl(180, 31%, 95%),
+    "dark-cyan": hsl(180, 8%, 52%),
+    "darkest-cyan": hsl(180, 14%, 20%),
+);
+$font-wt:(
+    "font-wt-700": 700,
+    "font-wt-500": 500,
+);
+
+@each $name, $color in $colors {
+    .bg-color-#{$name}{
+        background-color: $color;
+    }
+    .color-#{$name}{
+        color: $color;
+    }
+};
+@each $name, $font-weight in $font-wt {
+    .ft-weight-#{$name}{
+        font-weight: $font-weight;
+    }
+};
